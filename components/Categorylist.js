@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Category from './category';
-
 export default function CategoryList ({categories}) {
 if (!categories) return null
 
