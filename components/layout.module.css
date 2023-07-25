@@ -1,7 +1,10 @@
 /* components/Layout.module.css */
 
 .container {
-  padding: 1rem; /* Add some padding to the container */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -14,19 +17,24 @@
 .navbar {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
 }
 
-.navLink {
+.navList {
+  list-style: none;
+  display: flex;
+}
+
+.navItem {
   margin: 0 1rem;
-  color: #333; /* Set the color of the navigation links */
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.2s ease;
 }
 
-.navLink:hover {
-  color: #0070f3; /* Change the color on hover */
+.navItem a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navItem a:hover {
+  text-decoration: underline;
 }
 
 .main {
@@ -43,23 +51,26 @@
 .footer {
   background-color: #333; /* Dark background for the footer */
   color: #fff; /* White text color for the footer */
-  padding: 1rem;
+  padding: 3rem;
   text-align: center;
 }
 
 .socialLinks {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 3rem;
+  color: #fff;
 }
 
 .socialLink {
   margin: 0 0.5rem;
-  color: #fff; /* White color for social media links */
+  color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
-  transition: color 0.2s ease;
+  -o-transition: color 0.2s ease; /* Prefixed property listed first */
+  transition: color 0.2s ease; /* Unprefixed property listed after prefixed property */
 }
+
 
 .socialLink:hover {
   color: #0070f3; /* Change the color on hover */

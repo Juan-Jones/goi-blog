@@ -1,3 +1,21 @@
+/* styles/Home.module.css */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.featuredImage {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.featuredImage img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
