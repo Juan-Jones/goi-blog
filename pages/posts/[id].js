@@ -1,6 +1,6 @@
 // pages/posts/[id].js
 import Head from 'next/head';
-import { getPostData } from '../../lib/posts'; // Update with your post data fetching method
+import { getAllPostIds, getPostData } from '../../lib/posts'; // Import getAllPostIds function
 import Layout from '../../components/layout';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
