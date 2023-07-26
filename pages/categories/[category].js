@@ -1,11 +1,10 @@
-/ pages/categories/[category].js
-
-import { getPostsByCategory, getAllCategories } from '../../lib/posts'; // Update with your post data fetching methods
+// pages/categories/[category].js
 import Layout from '../../components/layout';
+import { getPostsByCategory } from '../../lib/posts';
 import Link from 'next/link';
 
 export async function getStaticPaths() {
-  const categories = getAllCategories(); // Update with your method to get all categories
+  const categories = getAllCategories();
   const paths = categories.map((category) => ({
     params: { category },
   }));
@@ -18,7 +17,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const category = params.category;
-  const posts = getPostsByCategory(category); // Update with your method to get posts by category
+  const posts = getPostsByCategory(category);
 
   return {
     props: {
